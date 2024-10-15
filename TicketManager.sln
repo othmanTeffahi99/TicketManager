@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 WebApi", "01 WebApi", "{1BA255EF-E186-483F-8C26-EFF0D5B33381}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Src", "00.Src", "{734F6574-CECF-4C24-8CB7-BCA21C0232A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketManager.Domain", "TicketManager.Domain\TicketManager.Domain.csproj", "{B4E39EE2-F95A-422E-82EA-2B98D9B46FD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketManager.Infrastructure", "TicketManager.Infrastructure\TicketManager.Infrastructure.csproj", "{D7FE5519-D521-4FC5-ACA3-9AC1DDE16CD9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketManager.Application", "TicketManager.Application\TicketManager.Application.csproj", "{2911E3B9-2F9B-4797-B843-99DCC8A8B6C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketManager.WebApi", "TicketManager.WebApi\TicketManager.WebApi.csproj", "{24813313-C426-4026-82B8-4FCA33EBAC3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.TicketManager.Test", "01.TicketManager.Test", "{3A814466-E055-4AAE-936C-89A1E789C65E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.AngularWebApp", "02.AngularWebApp", "{9A767C4C-3EEF-45A8-91D1-6650380E4BD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4E39EE2-F95A-422E-82EA-2B98D9B46FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E39EE2-F95A-422E-82EA-2B98D9B46FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E39EE2-F95A-422E-82EA-2B98D9B46FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E39EE2-F95A-422E-82EA-2B98D9B46FD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7FE5519-D521-4FC5-ACA3-9AC1DDE16CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7FE5519-D521-4FC5-ACA3-9AC1DDE16CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7FE5519-D521-4FC5-ACA3-9AC1DDE16CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7FE5519-D521-4FC5-ACA3-9AC1DDE16CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2911E3B9-2F9B-4797-B843-99DCC8A8B6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2911E3B9-2F9B-4797-B843-99DCC8A8B6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2911E3B9-2F9B-4797-B843-99DCC8A8B6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2911E3B9-2F9B-4797-B843-99DCC8A8B6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24813313-C426-4026-82B8-4FCA33EBAC3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24813313-C426-4026-82B8-4FCA33EBAC3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24813313-C426-4026-82B8-4FCA33EBAC3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24813313-C426-4026-82B8-4FCA33EBAC3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{734F6574-CECF-4C24-8CB7-BCA21C0232A2} = {1BA255EF-E186-483F-8C26-EFF0D5B33381}
+		{B4E39EE2-F95A-422E-82EA-2B98D9B46FD1} = {734F6574-CECF-4C24-8CB7-BCA21C0232A2}
+		{D7FE5519-D521-4FC5-ACA3-9AC1DDE16CD9} = {734F6574-CECF-4C24-8CB7-BCA21C0232A2}
+		{2911E3B9-2F9B-4797-B843-99DCC8A8B6C6} = {734F6574-CECF-4C24-8CB7-BCA21C0232A2}
+		{24813313-C426-4026-82B8-4FCA33EBAC3B} = {734F6574-CECF-4C24-8CB7-BCA21C0232A2}
+		{3A814466-E055-4AAE-936C-89A1E789C65E} = {1BA255EF-E186-483F-8C26-EFF0D5B33381}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {685034B4-7946-4E94-9F70-CAC5CBB97F23}
+	EndGlobalSection
+EndGlobal
