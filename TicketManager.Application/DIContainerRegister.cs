@@ -13,6 +13,7 @@ namespace TicketManager.Application
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddMediatR(typeof(DIContainerRegister).Assembly);
+            services.AddAutoMapper(typeof(DIContainerRegister).Assembly);
 
             return services;
         }

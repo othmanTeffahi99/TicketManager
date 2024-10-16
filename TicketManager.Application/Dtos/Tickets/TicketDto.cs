@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TicketManager.Application.Dtos.Tickets
 {
+    /// <summary>
+    /// The ticket data transfer object.
+    /// </summary>
     public record TicketDto(int Id, string Title, string Description, string Status);
 
 }

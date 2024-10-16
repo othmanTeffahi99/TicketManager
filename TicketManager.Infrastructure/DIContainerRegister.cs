@@ -16,6 +16,7 @@ using TicketManager.Infrastructure.Common.Repositories;
 using TicketManager.Infrastructure.Common.Security;
 using TicketManager.Infrastructure.Common.Security.TokenGenerator;
 using TicketManager.Infrastructure.Services;
+using TicketManager.Infrastructure.Tickets.Persistence;
 
 namespace TicketManager.Infrastructure
 {
@@ -25,13 +26,13 @@ namespace TicketManager.Infrastructure
         {
             services.AddDbContext<AppDbContext>(opt =>
             {
-                opt.UseInMemoryDatabase("TicketManagerDb");
+                opt.UseInMemoryDatabase("TicketManagerDb").UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
 
             services.AddAuth(configuration);
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<ITicketRepository, ITicketRepository>();
-            services.AddScoped<IUserRepository, IUserRepository>();
+            services.AddScoped<ITicketRepository, TicketRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
             services.AddScoped(typeof(IRepository<>), typeof(RepositoryBase<>));
 
