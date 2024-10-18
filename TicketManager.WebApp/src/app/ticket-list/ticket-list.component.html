@@ -1,0 +1,37 @@
+<div class="container mt-4" >
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Search tickets..." [(ngModel)]="searchTerm" (ngModelChange)="applyFilter()">
+  </div>
+  <table class="table table-bordered">
+    <thead class="table-success">
+      <tr>
+        <th (click)="sort('id')">Ticket Id <i class="bi" [ngClass]="getSortIcon('id')"></i></th>
+        <th (click)="sort('description')">Description <i class="bi" [ngClass]="getSortIcon('description')"></i></th>
+        <th (click)="sort('status')">Status <i class="bi" [ngClass]="getSortIcon('status')"></i></th>
+        <th (click)="sort('creationDate')">Date <i class="bi" [ngClass]="getSortIcon('creationDate')"></i></th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of filteredTickets">
+        <td>{{ ticket.id }}</td>
+        <td>{{ ticket.description }}</td>
+        <td>{{ ticket.status === 0 ? "Open" : "Closed" }}</td>
+        <td>{{ ticket.creationDate| date:'MM-dd-yyyy' }}</td>
+        <td>
+          <button class="btn btn-link text-purple me-2" (click)="openTicketForm(ticket)">Update</button>
+          <button class="btn btn-link text-purple" (click)="deleteTicket(ticket.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success" (click)="openTicketForm()">Add New</button> 
+  
+  
+    <!-- <ngb-pagination
+      [collectionSize]="totalItems"
+      [(page)]="currentPage"
+      [pageSize]="pageSize"
+      (pageChange)="onPageChange($event)">
+    </ngb-pagination> -->
+  </div>

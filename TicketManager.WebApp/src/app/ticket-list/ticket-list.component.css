@@ -1,0 +1,5 @@
+.table-success { background-color: green; color: white; }
+.text-purple { color: purple; text-decoration: none; }
+.text-purple:hover { text-decoration: underline; }
+th { cursor: pointer; }
+.bi-arrow-up, .bi-arrow-down { margin-left: 5px; }

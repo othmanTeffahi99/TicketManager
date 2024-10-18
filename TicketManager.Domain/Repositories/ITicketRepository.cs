@@ -7,7 +7,7 @@ using TicketManager.Domain.Entities.Ticket;
 
 namespace TicketManager.Domain.Repositories
 {
-    public interface ITicketRepository : IRepository<Ticket>
+    public interface ITicketRepository 
     {
     }
 }

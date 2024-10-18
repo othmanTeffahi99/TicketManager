@@ -9,7 +9,7 @@ namespace TicketManager.Domain.Repositories
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken token = default);
+        Task<IEnumerable<TEntity>> GetAllAsync(int pageNumber, int pageSize, CancellationToken token = default);
         Task<TEntity?> FindByIdAsync(object id, CancellationToken token = default);
         Task<TEntity> AddAsync(TEntity entity, CancellationToken token = default);
         Task<TEntity> UpdateAsync(TEntity entity, CancellationToken token = default); 

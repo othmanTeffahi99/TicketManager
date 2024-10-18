@@ -16,16 +16,16 @@ namespace TicketManager.Infrastructure.Common.Repositories
         private readonly AppDbContext _appDbContext = appDbContext;
 
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken token)
+        public async Task<IEnumerable<TEntity>> GetAllAsync(int pageNumber, int pagesize , CancellationToken token)
         {
-            return await _appDbContext.Set<TEntity>().ToListAsync(token);
+            return await _appDbContext.Set<TEntity>().Skip(pageNumber * pagesize).Take(pagesize).ToListAsync();
         }
 
         //TODO: change the type of id
 
         public async Task<TEntity?> FindByIdAsync(object id, CancellationToken token)
         {
-            return await _appDbContext.Set<TEntity>().FindAsync((object?[]?)id, cancellationToken: token);
+            return await _appDbContext.Set<TEntity>().FindAsync(new object[] { id }, cancellationToken: token);
         }
 
         public async Task<TEntity> AddAsync(TEntity entity, CancellationToken token)

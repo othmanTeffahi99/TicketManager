@@ -10,7 +10,7 @@ using TicketManager.Infrastructure.Common.Repositories;
 
 namespace TicketManager.Infrastructure.Tickets.Persistence
 {
-    public class TicketRepository(AppDbContext appDbContext) : RepositoryBase<Ticket>(appDbContext), ITicketRepository  
+    public class TicketRepository : ITicketRepository
     {
     }
 }

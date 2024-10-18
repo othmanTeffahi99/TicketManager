@@ -1,6 +1,7 @@
 using Serilog;
 using TicketManager.Application;
 using TicketManager.Infrastructure;
+using TicketManager.WebApi.Common.Helpers;
 using TrackMyCourseApi.Common.GlobalExceptionHandler;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,5 +40,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+PrepareData.PrepData(app);
 
 app.Run();
