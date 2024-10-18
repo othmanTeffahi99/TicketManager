@@ -3,7 +3,7 @@
 ## Overview
 
 This repository contains a Ticket Manager Application built using the Domain-Driven Design (DDD) architecture in ASP.NET for the backend, and Angular for the frontend. 
-The application allows users to manage hotel-related entities such as users, rooms, and reservations.
+The application allows users to manage Ticket-related entities such as users, rooms, and reservations.
 
 ## Features
 
