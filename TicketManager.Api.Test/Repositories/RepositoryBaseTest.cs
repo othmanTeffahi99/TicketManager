@@ -30,11 +30,11 @@ namespace YourNamespace.Tests
                 new TestEntity { Id = 1, Name = "Test1" },
                 new TestEntity { Id = 2, Name = "Test2" }
             };
-            _mockRepository.Setup(repo => repo.GetAllAsync(It.IsAny<CancellationToken>()))
+            _mockRepository.Setup(repo => repo.GetAllAsync(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(entities);
 
             // Act
-            var result = await _mockRepository.Object.GetAllAsync();
+            var result = await _mockRepository.Object.GetAllAsync(0,1);
 
             // Assert
             result.ShouldNotBeNull();
